@@ -1,0 +1,15 @@
+name: ElytraTool
+version: '${project.version}'
+main: net.morphocraft.spigot.elytratool.ElytraTool
+prefix: MorphoCraft-ElytraTool
+load: STARTUP
+authors: [ MorphoCraft ]
+website: https://morphocraft.net/
+api-version: 1.14
+commands:
+  elytratool:
+    aliases:
+      - "et"
+    usage: "/elytratool"
+    description: "ElytraTool Command"
+    permission: elytratool.use
