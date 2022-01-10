@@ -6,7 +6,7 @@
 
     <groupId>net.morphocraft.spigot</groupId>
     <artifactId>ElytraTool</artifactId>
-    <version>1.0.0-api-1.14.1</version>
+    <version>1.0.1-api-1.14.1</version>
     <packaging>jar</packaging>
 
     <name>ElytraTool</name>
