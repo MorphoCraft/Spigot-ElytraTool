@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.inventory.EquipmentSlot;
@@ -33,9 +34,9 @@ public class UseItemEventListener implements Listener {
     public void onPlayerInteractEvent(PlayerInteractEvent event){
         Player player=event.getPlayer();
         if (player.hasPermission("elytratool.use")||player.isOp()){
-            if (event.getHand()== EquipmentSlot.HAND){
+            if (event.getHand()== EquipmentSlot.HAND&&event.getAction()==Action.RIGHT_CLICK_AIR){
                 ItemStack itemInHand=event.getItem();
-                if(itemInHand.getType()== Material.STICK){
+                if(itemInHand!=null&&itemInHand.getType()== Material.STICK){
                     List<String> lore=itemInHand.getItemMeta().getLore();
                     if (lore!=null&&lore.contains("§3Elytra Tool")){
                         if (player.isGliding()==false){
